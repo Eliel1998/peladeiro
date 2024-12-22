@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget listTileComponent(PeladeiroEntity peladeiro) {
     return Card(
-      margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+      margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16.0),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
       ),
