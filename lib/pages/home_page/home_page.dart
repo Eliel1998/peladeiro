@@ -73,11 +73,9 @@ class _HomePageState extends State<HomePage> {
               return Column(
                 children: [
                   listTileComponent(peladeiros[index]),
-                  if ((index + 1) % 4 == 0)
-                    Container(
-                      height: 10,
-                      color: Theme.of(context).colorScheme.primary,
-                    ),
+                  if ((index + 1) % 4 == 0 &&
+                      index != peladeiros.length - 1) ...[
+                    Divider(thickness: 2,color: Theme.of(context).colorScheme.primary)],
                 ],
               );
             },
