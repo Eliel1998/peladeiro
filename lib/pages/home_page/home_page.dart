@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
       },
     );
   }
-  
+
   Widget listTileComponent(PeladeiroEntity peladeiro) {
     return Card(
       margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
@@ -70,7 +70,16 @@ class _HomePageState extends State<HomePage> {
           return ListView.builder(
             itemCount: peladeiros.length,
             itemBuilder: (context, index) {
-              return listTileComponent(peladeiros[index]);
+              return Column(
+                children: [
+                  listTileComponent(peladeiros[index]),
+                  if ((index + 1) % 4 == 0)
+                    Container(
+                      height: 10,
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
+                ],
+              );
             },
           );
         },
